@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from '../images/logo.png';
+import '../style/header.css';
+import { FiShoppingCart } from 'react-icons/fi';
 
-export default function Header() {
+
+function Header() {
   return (
     <div className="header">
       <div className="header__content">
@@ -12,8 +15,9 @@ export default function Header() {
         />
         <h4 data-className="header__title">MCX</h4>
       </div>
+      <FiShoppingCart />
     </div>
   );
 }
 
-// export default Header;
+export default Header;
