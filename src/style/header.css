@@ -1,6 +1,8 @@
 :root {
-  --grey: #444444
+  --grey: #444444;
+  --white: #ffffff;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 .header {
   display: flex;
@@ -8,15 +10,28 @@
   justify-content: space-around;
   background: var(--grey);
   padding: 1rem;
-  height: 75px;
+  height: 80px;
 }
 
 .header__content {
   display: flex;
   align-items: center;
 }
+.header__content > h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-size: 25px;
+  letter-spacing: 6px;
+  margin-left: 11px;
+}
 
 .header__logo {
   max-width: 30px;
   max-height: 100%;
+}
+
+.header__cart {
+  color: var(--white);
+  font-size: 22px;
+  height: 22px;
 }
