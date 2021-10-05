@@ -7,15 +7,17 @@ import { FiShoppingCart } from 'react-icons/fi';
 function Header() {
   return (
     <div className="header">
-      <div className="header__content">
-        <img
-          src={ logo }
-          alt="logo-icon"
-          className="logo"
-        />
-        <h4 data-className="header__title">MCX</h4>
-      </div>
-      <FiShoppingCart />
+      <div>
+        <div className="header__content">
+          <img
+            src={ logo }
+            alt="logo-icon"
+            className="header__logo"
+            />
+          <h4 data-className="header__title">MCX</h4>
+        </div>
+      </div>  
+      <FiShoppingCart /> 
     </div>
   );
 }
