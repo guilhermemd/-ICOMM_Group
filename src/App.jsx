@@ -7,6 +7,7 @@ function App() {
   return (
     <Header />
   );
+  // teste
 }
 
 export default App;
