@@ -1,0 +1,34 @@
+.season {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* text-align: center; */
+}
+
+/* .season h4 {
+  position: absolute;
+  line-height: 1.3; 
+  padding: 2px 0; 
+} */
+.season__img1 {
+  margin: 28px 10px 0  50px;
+  z-index: -1;
+}
+
+.season__img2 {
+  margin: 28px 50px 0  10px;
+  /* z-index: -1; */
+}
+
+/* .season__text {
+  margin-left: 30px;
+} */
+
+
+.season__left__text {
+  position: absolute;  
+  left: 4%;                        /* horizontal alignment */
+  top: 50%; 
+  /* transform: translate(-50%, -50%); */
+}

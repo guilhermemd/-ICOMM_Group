@@ -6,7 +6,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 function Header() {
   return (
-    <div className="header">
+    <nav className="header">
       <div>
         <div className="header__content">
           <img
@@ -18,7 +18,7 @@ function Header() {
         </div>
       </div>  
       <FiShoppingCart className="header__cart" /> 
-    </div>
+    </nav>
   );
 }
 
