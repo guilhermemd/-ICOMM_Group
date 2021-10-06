@@ -7,6 +7,7 @@ import '../style/season.css';
 function Season() {
   return (
     <section className="season">
+    <section className="season__container">
       <div className="season__left__box" >
         <img 
           src={ summer }
@@ -29,6 +30,7 @@ function Season() {
           <h4>LE LIS</h4> <h4>BLANC</h4>
         </div>
       </div>    
+    </section>
     </section>
   );
 }
