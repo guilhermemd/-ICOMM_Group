@@ -15,12 +15,12 @@
 }
 .season__right__text {
   margin-top: -10rem;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .season__left__text {
-  margin-top: -10rem;
-  margin-left: 5rem;
+  margin-top: -11rem;
+  margin-left: 3rem;
 }
 
 .season {
@@ -31,6 +31,7 @@
 
 .season h4 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: var(--white);
   font-size: 25px;
   letter-spacing: 6px;
