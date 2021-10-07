@@ -7,8 +7,8 @@ import { FiShoppingCart } from 'react-icons/fi';
 function Header() {
   return (
     <nav className="header">
-      <div>
-        <div className="header__content">
+      <div className="header__container">
+        <div className="header__logobox">
           <img
             src={ logo }
             alt="logo-icon"
