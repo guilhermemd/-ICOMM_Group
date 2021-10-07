@@ -25,11 +25,13 @@ function Carousel() {
         <div className="products__carousel">
           <Slider {...settings}>
             {products.map(({ image, product, price, price_x }) => (
-              <div className="product-container">
-                <img className="product-img" src={ image } alt={ product }/>
-                <h3 className="product-name">{ product }</h3>
-                <h4 className="product-price">{ price }</h4>
-                <p className="product-price_x">{ price_x }</p>
+              <div>
+                <div className="product-container" >
+                  <img className="product-img" src={ image } alt={ product }/>
+                  <h3 className="product-name">{ product }</h3>
+                  <h4 className="product-price">{ price }</h4>
+                  <p className="product-price_x">{ price_x }</p>
+                </div>
               </div>
             ))}
           </Slider>

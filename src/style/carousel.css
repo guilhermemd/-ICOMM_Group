@@ -1,3 +1,6 @@
+:root {
+  --button-grey: #CCCCCC;
+}
 .products {
   margin-top: 5rem;
 }
@@ -9,9 +12,37 @@
 }
 
 .products__carousel {
+  /* display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; */
   padding: 35px 106px 0px 106px;
 }
 
 .products__carousel button {
-  background-color: red;
+  background-color: var(--button-grey);
+  width: 40px;
+  min-height: 53px;
+  /* padding: 0 0 0 0; */
+}
+
+/* .products__carousel ::before ::after {
+  content: '<';
+  font-size: 30px;
+}
+
+.products__carousel ::after {
+  content: ">";
+  font-size: 30px;
+} */
+
+.product-name {
+  font-size: 15px;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
