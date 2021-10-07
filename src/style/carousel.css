@@ -7,3 +7,12 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.products__carousel {
+  padding: 35px 106px 0px 106px;
+}
+
+.slick-arrow {
+  /* width: 35px;
+  background-color: blue; */
+}
