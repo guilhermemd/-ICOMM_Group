@@ -1,0 +1,9 @@
+.products {
+  margin-top: 5rem;
+}
+
+.products__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
