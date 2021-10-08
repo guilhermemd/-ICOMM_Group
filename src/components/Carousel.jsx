@@ -28,7 +28,7 @@ function Carousel() {
               <div>
                 <div className="product-container" >
                   <img className="product-img" src={ image } alt={ product }/>
-                  <div>
+                  <div className="product-info">
                     <h3 className="product-name">{ product }</h3>
                     <h4 className="product-price">{ price }</h4>
                     <p className="product-price_x">{ price_x }</p>
