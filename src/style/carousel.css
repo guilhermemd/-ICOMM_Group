@@ -52,7 +52,20 @@
   font-size: 15px;
 }
 
-/* arrumar magrin do carrossel */
+/* .slick-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+/* .slick-track  talvez o segredo do carrossel esteja aqui*/
+
+/* .product-container-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
 .product-container {
   display: flex;
   align-items: center;
@@ -70,6 +83,11 @@
   flex-direction: column;
   margin:auto;
 }
+
+.product-img {
+  height: 260px;
+}
+
 .product-name {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
