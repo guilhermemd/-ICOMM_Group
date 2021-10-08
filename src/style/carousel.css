@@ -31,15 +31,6 @@
   margin: 0 -40px 0 -40px;
 }
 
-/* .products__carousel ::before ::after {
-  content: '<';
-  font-size: 30px;
-}
-
-.products__carousel ::after {
-  content: ">";
-  font-size: 30px;
-} */
 .products__title {
   font-family: 'Nunito', sans-serif;
   font-size: 24px;
