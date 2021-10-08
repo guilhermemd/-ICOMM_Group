@@ -67,25 +67,27 @@
 } */
 
 .product-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column; */
+  /* justify-content: center; */
   border: 1px solid #EEEEEE;
   margin: 0 5px 0 5px;
   padding: 0 0 0 0;
 }
 
-/* tentando arrumar leter do carrosel*/
+/* tentando arrumar letra do carrosel*/
 .product-info {
-  display: flex;
+  /* display: flex;
   align-content: flex-start;
-  flex-direction: column;
-  margin:auto;
+  flex-direction: column;*/
+  margin: auto; 
+  height: 90px;
 }
 
 .product-img {
-  height: 260px;
+  height: 300px;
+  margin: auto;
 }
 
 .product-name {
