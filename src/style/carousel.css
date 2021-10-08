@@ -6,8 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
 
 .products {
-  width: 100%;
   max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
 }
 
 .products__title {
@@ -17,11 +19,8 @@
 }
 
 .products__carousel {
-  /* display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
-  padding: 35px 106px 0px 106px;
+  justify-content: center;
+  /* padding: 35px 106px 0px 106px; */
 }
 
 .products__carousel button {
