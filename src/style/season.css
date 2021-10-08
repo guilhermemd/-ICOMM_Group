@@ -3,16 +3,17 @@
 .season__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 90px 140px 20px 160px;
+  grid-gap: 20px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 90px 0 160px;
 }
 
-.season__left__box {
-  padding-right: 10px;;
+.season__container img {
+  width: 100%;
 }
 
-.season__right__box {
-  padding-left: 10px;;
-}
 .season__right__text {
   margin-top: -10rem;
   margin-left: 2rem;
