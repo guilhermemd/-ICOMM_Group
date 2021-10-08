@@ -4,13 +4,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-
   width: 100%;
   max-width: 1200px;
   margin: 90px 0 160px;
 }
 
-.season__container img {
+/* .season__container img {
+  width: 100%;
+} */
+
+/* testando imagem para deploy */
+
+.season__img__left {
+  width: 100%;
+}
+
+.season__img__right {
   width: 100%;
 }
 
