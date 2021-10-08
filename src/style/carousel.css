@@ -5,10 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
 
-.products {
-  margin-top: 7rem;
-}
-
 .products__title {
   display: flex;
   align-items: center;
