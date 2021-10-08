@@ -1,0 +1,48 @@
+:root {
+  --grey: #444444;
+  --white: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+.header {
+  width: 100%;
+  z-index: 100;
+  position: fixed; 
+  background: var(--grey);
+  height: 70px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logobox {
+  display: flex;
+  align-items: center;
+}
+.header__logobox > h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: var(--white);
+  font-size: 25px;
+  letter-spacing: 6px;
+  margin-left: 11px;
+}
+
+.header__logo {
+  max-width: 30px;
+  max-height: 100%;
+}
+
+.header__cart {
+  color: var(--white);
+  font-size: 22px;
+  height: 22px;
+}
