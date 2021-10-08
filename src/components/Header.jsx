@@ -16,8 +16,8 @@ function Header() {
             />
           <h4 data-className="header__title">MCX</h4>
         </div>
+        <FiShoppingCart className="header__cart" /> 
       </div>  
-      <FiShoppingCart className="header__cart" /> 
     </nav>
   );
 }

@@ -1,8 +1,11 @@
 :root {
   --button-grey: #CCCCCC;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+
 .products {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .products__title {
@@ -35,6 +38,13 @@
   content: ">";
   font-size: 30px;
 } */
+.products__title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 6px;
+
+}
 
 .product-name {
   font-size: 15px;
@@ -45,4 +55,9 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.product-container h3 h4 p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
 }
