@@ -66,8 +66,9 @@
 /* tentando arrumar leter do carrosel*/
 .product-info {
   display: flex;
-  align-items: center;
+  align-content: flex-start;
   flex-direction: column;
+  margin:auto;
 }
 .product-name {
   font-family: 'Nunito', sans-serif;
