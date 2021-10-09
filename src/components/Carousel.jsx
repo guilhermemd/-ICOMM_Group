@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "../style/carousel.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { FiHeart} from "react-icons/fi";
+
 
 import products from "../service/api";
 
@@ -32,6 +34,18 @@ function Carousel() {
     cursor: "pointer",
   };
 
+/* !!!!Gambiarra!!!! */
+
+  function MouseOver(event) {
+    event.target.style.background = '#444444';
+  }
+
+  function MouseOut(event){
+    event.target.style.background= '#EEEEEE';
+  }
+
+/* !!!!Gambiarra!!!! */
+
   const PrevArrow = (props) => {
     const { onClick, style } = props;
 
@@ -40,6 +54,8 @@ function Carousel() {
         type="button"
         onClick={onClick}
         style={{ ...style, ...stylesPrevArrow }}
+        onMouseOver={ MouseOver }
+        onMouseOut={ MouseOut }
       >
         <RiArrowLeftSLine />
       </button>
@@ -54,6 +70,8 @@ function Carousel() {
         type="button"
         onClick={onClick}
         style={{ ...style, ...stylesNextArrow }}
+        onMouseOver={ MouseOver }
+        onMouseOut={ MouseOut }
       >
         <RiArrowRightSLine />
       </button>
@@ -78,7 +96,10 @@ function Carousel() {
               <div>
                 <div className="product-container">
                   <div className="product-extras">
-                    <h4>{ extras }</h4>
+                    <h4>
+                      { extras }
+                    </h4>
+                      <FiHeart />
                   </div>  
                   <img className="product-img" src={image} alt={product} />
                   <div className="product-info">

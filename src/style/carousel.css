@@ -1,6 +1,7 @@
 :root {
   --button-grey: #CCCCCC;
-  --font-productname: #757575
+  --font-productname: #757575;
+  --hover-carrossel: #444444;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
@@ -17,6 +18,10 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 32px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 6px;
 }
 
 .products__carousel {
@@ -29,14 +34,6 @@
   width: 40px;
   min-height: 53px;
   margin: 0 -40px 0 -40px;
-}
-
-.products__title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 24px;
-  font-weight: 200;
-  letter-spacing: 6px;
-
 }
 
 .product-name {
@@ -52,6 +49,12 @@
   margin: 0 5px 0 5px;
   padding: 0 0 0 0;
   height: 400px;
+}
+
+.product-extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* tentando arrumar letra do carrosel*/
@@ -84,4 +87,3 @@
   color: var(--font-productname);
 }
 
-/*teste */
