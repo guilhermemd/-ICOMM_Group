@@ -4,15 +4,38 @@ import Context from '../context/Context';
 import Slider from "react-slick";
 import "../style/carousel.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { FiHeart} from "react-icons/fi";
+// import { FiHeart} from "react-icons/fi";
+// import { FaHeart } from 'react-icons/fa'
 
-
-
-
-// import products from "../service/api";
 
 function Carousel() {
-  const { products } = useContext(Context);
+  const { products, liked, likedProducts  } = useContext(Context);
+  // console.log(liked);
+  console.log(liked)
+
+
+// const heartProducts = (id) => {
+//   // console.log(liked)
+//   setLiked(id)
+//   if (!liked) {
+//     setLiked(id)
+//     return (
+//       <div>
+//         <FiHeart />
+//       </div>
+//     )
+//   }
+
+//   if (liked) {
+//     return (
+//       <div>
+//         <FaHeart />
+//       </div>
+//     )
+//   }
+
+// }
+
 
   const settings = {
     dots: true,
@@ -97,15 +120,17 @@ function Carousel() {
             nextArrow={<NextArrow />}
             {...settings}
           >
-            {products.map(({ image, product, price, price_x, extras }) => (
+            {products.map(({ id, image, product, price, price_x, extras }) => (
               <div>
                 <div className="product-container">
                   <div className="product-extras">
                     <h4>
                       { extras }
                     </h4>
-                      <FiHeart />
                   </div>  
+                    <button onClick={ () => likedProducts(id) }>
+                      click me
+                    </button>
                   <img className="product-img" src={image} alt={product} />
                   <div className="product-info">
                     <h3 className="product-name">{product}</h3>

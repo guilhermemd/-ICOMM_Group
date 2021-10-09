@@ -7,11 +7,22 @@ import Context from './Context';
 
 function Provider({ children }) {
   const [ products, setProducts ] = useState([...productsAPI])
+  const [ liked, setLiked ] = useState([]);
+
+  const likedProducts = (id) => {
+    setLiked([ ...liked, id])
+    // const alreadyLiked = liked.filter((item) => item === id);
+    // if (alreadyLiked > 2) {
+
+    // }
+  }
 
 
   const contextValue = {
     setProducts,
     products,
+    liked, 
+    likedProducts, 
   };
 
   return (
