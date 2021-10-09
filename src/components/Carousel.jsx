@@ -14,7 +14,7 @@ function Carousel() {
     slidesToScroll: 1,
   };
 
-  const stylesArrowLeft = {
+  const stylesPrevArrow = {
     backgroundColor: "#EEEEEE",
     border: "none",
     position: "absolute",
@@ -23,31 +23,41 @@ function Carousel() {
     cursor: "pointer",
   };
 
+  const stylesNextArrow = {
+    backgroundColor: "#EEEEEE",
+    border: "none",
+    position: "absolute",
+    right: "-2rem",
+    top: "8rem",
+    cursor: "pointer",
+  };
+
   const PrevArrow = (props) => {
     const { onClick, style } = props;
 
     return (
-      <div>
-        <button
-          type="button"
-          onClick={onClick}
-          style={{ ...style, ...stylesArrowLeft }}
-        >
-          <RiArrowLeftSLine />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={onClick}
+        style={{ ...style, ...stylesPrevArrow }}
+      >
+        <RiArrowLeftSLine />
+      </button>
     );
   };
 
   const NextArrow = (props) => {
-    const { onClick } = props;
+    const { onClick, style } = props;
 
     return (
-      <div>
-        <button type="button" onClick={onClick}>
-          <RiArrowRightSLine />
-        </button>
-      </div>
+      <button
+        type="button"
+        onClick={onClick}
+        style={{ ...style, ...stylesNextArrow }}
+      >
+        <RiArrowRightSLine />
+      </button>
+
     );
   };
 
