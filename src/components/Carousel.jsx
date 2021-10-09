@@ -56,8 +56,8 @@ function Carousel() {
         style={{ ...style, ...stylesPrevArrow }}
         onMouseOver={ MouseOver }
         onMouseOut={ MouseOut }
-      >
-        <RiArrowLeftSLine />
+        >
+        <RiArrowLeftSLine className="arrow" />
       </button>
     );
   };
@@ -73,9 +73,8 @@ function Carousel() {
         onMouseOver={ MouseOver }
         onMouseOut={ MouseOut }
       >
-        <RiArrowRightSLine />
+        <RiArrowRightSLine className="arrow"/>
       </button>
-
     );
   };
 
