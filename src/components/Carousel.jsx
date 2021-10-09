@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from 'react';
+import Context from '../context/Context';
+
 import Slider from "react-slick";
 import "../style/carousel.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { FiHeart} from "react-icons/fi";
 
 
-import products from "../service/api";
+
+
+// import products from "../service/api";
 
 function Carousel() {
+  const { products } = useContext(Context);
+
   const settings = {
     dots: true,
     infinite: true,

@@ -7,15 +7,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './style/app.css';
-
+import Provider from './context/Provider';
 
 function App() {
   return (
-    <>
+    <Provider >
       <Header />
       <Season />
       <Carousel />
-    </>
+    </ Provider>
   );
 }
 
