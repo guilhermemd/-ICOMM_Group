@@ -1,20 +1,56 @@
-import React from 'react';
-import Slider from 'react-slick';
-import '../style/carousel.css';
+import React from "react";
+import Slider from "react-slick";
+import "../style/carousel.css";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
-import products from '../service/api'
-
-
+import products from "../service/api";
 
 function Carousel() {
   const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 1
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
   };
-  
+
+  const stylesArrowLeft = {
+    backgroundColor: "#EEEEEE",
+    border: "none",
+    position: "absolute",
+    left: "-2rem",
+    top: "8rem",
+    cursor: "pointer",
+  };
+
+  const PrevArrow = (props) => {
+    const { onClick, style } = props;
+
+    return (
+      <div>
+        <button
+          type="button"
+          onClick={onClick}
+          style={{ ...style, ...stylesArrowLeft }}
+        >
+          <RiArrowLeftSLine />
+        </button>
+      </div>
+    );
+  };
+
+  const NextArrow = (props) => {
+    const { onClick } = props;
+
+    return (
+      <div>
+        <button type="button" onClick={onClick}>
+          <RiArrowRightSLine />
+        </button>
+      </div>
+    );
+  };
+
   // console.log(products)
   return (
     <section className="products">
@@ -23,23 +59,27 @@ function Carousel() {
           <h1>DESTAQUES</h1>
         </div>
         <div className="products__carousel">
-          <Slider {...settings}>
+          <Slider
+            prevArrow={<PrevArrow />}
+            nextArrow={<NextArrow />}
+            {...settings}
+          >
             {products.map(({ image, product, price, price_x }) => (
               <div>
-                <div className="product-container" >
-                  <img className="product-img" src={ image } alt={ product }/>
+                <div className="product-container">
+                  <img className="product-img" src={image} alt={product} />
                   <div className="product-info">
-                    <h3 className="product-name">{ product }</h3>
-                    <h4 className="product-price">{ price }</h4>
-                    <p className="product-price_x">{ price_x }</p>
+                    <h3 className="product-name">{product}</h3>
+                    <h4 className="product-price">{price}</h4>
+                    <p className="product-price_x">{price_x}</p>
                   </div>
                 </div>
               </div>
             ))}
           </Slider>
         </div>
-      </div>  
-    </section> 
+      </div>
+    </section>
   );
 }
 
