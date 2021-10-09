@@ -74,9 +74,12 @@ function Carousel() {
             nextArrow={<NextArrow />}
             {...settings}
           >
-            {products.map(({ image, product, price, price_x }) => (
+            {products.map(({ image, product, price, price_x, extras }) => (
               <div>
                 <div className="product-container">
+                  <div className="product-extras">
+                    <h4>{ extras }</h4>
+                  </div>  
                   <img className="product-img" src={image} alt={product} />
                   <div className="product-info">
                     <h3 className="product-name">{product}</h3>
