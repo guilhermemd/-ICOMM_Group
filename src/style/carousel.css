@@ -11,8 +11,9 @@
 .products {
   max-width: 1200px;
   margin: auto;
+  padding-bottom: 2rem;
   width: 100%;
-  padding: 10px;
+  padding-bottom: 9rem;
 }
 
 .products__title {
@@ -32,10 +33,9 @@
 }
 
 .products__carousel button {
-  background-color: var(--button-grey);
-  width: 40px;
-  min-height: 53px;
-  margin: 0 -40px 0 -40px;
+  /* min-height: 53px; */
+  margin: 30px -21px 0 -42px;
+  color: white;
 }
 
 .product-name {
@@ -96,15 +96,19 @@
   color: var(--heart);
 }
 
-.product-comprar .comprar{
-  visibility: hidden;
-}
+.comprar {
+  background-color: var(--button-comprar);
+  margin-bottom: 5px;
+  padding: 22px;
+} 
 
-.product-comprar:hover .comprar {
+
+.product-comprar:hover {
   cursor: pointer;
+  position: relative;
   background-color: var(--button-comprar);
   visibility: visible;
-  padding: 5rem 5rem 5rem 5rem;
+  padding: 4rem 4rem 4rem 4rem;
   display: block;
-  color: red;
+  color: white;
 }
