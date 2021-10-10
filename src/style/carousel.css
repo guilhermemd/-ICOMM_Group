@@ -125,37 +125,21 @@
   color: var(--heart);
 }
 
-/* .comprar {
-  background-color: var(--button-comprar);
-  margin-bottom: 5px;
-  padding: 22px;
-}  
-
-.product-comprar {
-  visibility: hidden;
-
-}
-
-.product-comprar:hover {
-  cursor: pointer;
-  position: relative;
-  background-color: var(--button-comprar);
-  visibility: visible;
-  padding: 4rem 4rem 4rem 4rem;
-  display: block;
-  color: white;
-}  */
-
 .product-comprar {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 20px;
+
 }
 
 
 .product-comprar .comprar{
   visibility: hidden;
   
+}
+.product-comprar:hover {
+  background-color: var(--button-comprar);
 }
 
 .product-comprar:hover .comprar {
