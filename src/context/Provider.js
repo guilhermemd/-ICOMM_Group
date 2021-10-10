@@ -11,10 +11,14 @@ function Provider({ children }) {
 
   const likedProducts = (id) => {
     setLiked([ ...liked, id])
-    // const alreadyLiked = liked.filter((item) => item === id);
-    // if (alreadyLiked > 2) {
+    const alreadyLiked = liked.filter((item) => item === id);
 
-    // }
+    if (alreadyLiked.length > 2) {
+      const removeLiked = liked.filter((item) => item !== id);
+      return setLiked([...removeLiked]);
+    }
+    
+
   }
 
 

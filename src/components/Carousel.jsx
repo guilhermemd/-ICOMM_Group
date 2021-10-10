@@ -10,7 +10,6 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 function Carousel() {
   const { products, liked, likedProducts  } = useContext(Context);
-  // console.log(liked);
   console.log(liked)
 
 
