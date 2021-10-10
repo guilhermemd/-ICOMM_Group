@@ -95,13 +95,17 @@
 .heart {
   color: var(--heart);
 }
-
+/* 
 .comprar {
   background-color: var(--button-comprar);
   margin-bottom: 5px;
   padding: 22px;
-} 
+}  */
 
+/* .product-comprar {
+  visibility: hidden;
+
+}
 
 .product-comprar:hover {
   cursor: pointer;
@@ -109,6 +113,18 @@
   background-color: var(--button-comprar);
   visibility: visible;
   padding: 4rem 4rem 4rem 4rem;
+  display: block;
+  color: white;
+} */
+
+.product-comprar .comprar{
+  visibility: hidden;
+}
+
+.product-comprar:hover .comprar {
+  visibility: visible;
+  padding: 5rem 5rem 5rem 5rem;
+  background-color: var(--button-comprar);
   display: block;
   color: white;
 }
