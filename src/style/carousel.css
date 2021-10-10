@@ -94,3 +94,24 @@
 .heart {
   color: var(--heart);
 }
+
+.product-comprar .comprar{
+  visibility: hidden;
+}
+
+.product-comprar:hover .comprar {
+  visibility: visible;
+  padding: 5rem 5rem 5rem 5rem;
+  background-color: blue;
+  display: block;
+  color: red;
+}
+
+.hide {
+  display: hidden;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
