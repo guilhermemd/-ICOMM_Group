@@ -7,10 +7,14 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { FiHeart} from "react-icons/fi";
 import { FaHeart } from 'react-icons/fa'
 
+const classNameExtras = (extras) => {
+  if(extras === 'VERÃO 2022') return 'prduct__extras__verao';
+  if(extras === '20% OFF') return 'prduct__extras__20off';
+  if(extras === 'LANÇAMENTO') return 'prduct__extras__lancamento';
+}
 
 function Carousel() {
   const { products, likedProducts, liked  } = useContext(Context);
-
 
 const heartProducts = (id) => {
   const alreadyLiked = liked.includes(id);
@@ -108,7 +112,7 @@ const heartProducts = (id) => {
               <div>
                 <div className="product-container">
                   <div className="product-extras">
-                    <h4>
+                    <h4 className={ classNameExtras(extras) }>
                       { extras }
                     </h4>
                     { heartProducts(id) }

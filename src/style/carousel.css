@@ -4,6 +4,9 @@
   --hover-carrossel: #444444;
   --heart: #E35151;
   --button-comprar: #824D3E;
+  --verao-letter: #666666;
+  --off20-color: #EBD7CE;
+  --lancamento--color: #824D3E;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
@@ -89,7 +92,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 16px 25px 0px 27px;
+  margin: 10px 14px 4px 10px;
+}
+
+.prduct__extras__verao {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  border: 1px solid var(--verao-letter);
+  color: var(--verao-letter);
+  font-size: 13px;
+  padding: 5px;
+}
+
+.prduct__extras__20off {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background-color: var(--off20-color);
+  border: 1px solid var(--off20-color);
+  font-size: 13px;
+  padding: 5px;
+}
+
+.prduct__extras__lancamento {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: var(--lancamento--color);
+  border: 1px solid var( --lancamento--color);
+  font-size: 13px;
+  padding: 5px;
 }
 
 .heart {
@@ -124,6 +155,7 @@
 .product-comprar:hover .comprar {
   visibility: visible;
   padding: 5rem 5rem 5rem 5rem;
+  border: 1px solid var(--off20-color);
   background-color: var(--button-comprar);
   display: block;
   color: white;
