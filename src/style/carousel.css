@@ -3,6 +3,7 @@
   --font-productname: #757575;
   --hover-carrossel: #444444;
   --heart: #E35151;
+  --button-comprar: #824D3E;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
@@ -100,18 +101,10 @@
 }
 
 .product-comprar:hover .comprar {
+  cursor: pointer;
+  background-color: var(--button-comprar);
   visibility: visible;
   padding: 5rem 5rem 5rem 5rem;
-  background-color: blue;
-  display: block;
-  color: red;
-}
-
-.hide {
-  display: hidden;
-}
-    
-.myDIV:hover + .hide {
   display: block;
   color: red;
 }
