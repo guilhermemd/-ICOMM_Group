@@ -23,7 +23,7 @@ const heartProducts = (id) => {
 
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -31,7 +31,7 @@ const heartProducts = (id) => {
   };
 
   const stylesPrevArrow = {
-    backgroundColor: "#EEEEEE",
+    backgroundColor: "#CCCCCC",
     border: "none",
     position: "absolute",
     left: "-2rem",
@@ -40,7 +40,7 @@ const heartProducts = (id) => {
   };
 
   const stylesNextArrow = {
-    backgroundColor: "#EEEEEE",
+    backgroundColor: "#CCCCCC",
     border: "none",
     position: "absolute",
     right: "-2rem",
@@ -71,7 +71,7 @@ const heartProducts = (id) => {
         onMouseOver={ MouseOver }
         onMouseOut={ MouseOut }
         >
-        <RiArrowLeftSLine className="arrow" />
+        <RiArrowLeftSLine size={50} className="arrow" />
       </button>
     );
   };
@@ -87,7 +87,7 @@ const heartProducts = (id) => {
         onMouseOver={ MouseOver }
         onMouseOut={ MouseOut }
       >
-        <RiArrowRightSLine className="arrow"/>
+        <RiArrowRightSLine size={50} className="arrow"/>
       </button>
     );
   };
