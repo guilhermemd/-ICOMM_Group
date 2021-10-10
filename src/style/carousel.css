@@ -44,12 +44,13 @@
 .product-container {
   /* display: flex;
   align-items: center;
-  flex-direction: column; */
-  /* justify-content: center; */
+  flex-direction: column; 
+  justify-content: center;  */
   border: 1px solid #EEEEEE;
   margin: 0 5px 0 5px;
   padding: 0 0 0 0;
-  height: 400px;
+  height: 450px;
+  width: 269px;
 }
 
 /* tentando arrumar letra do carrosel*/
@@ -58,6 +59,7 @@
   align-content: flex-start;
   flex-direction: column;*/
   height: 90px;
+  padding: 5px 6px 1px 15px;
 }
 
 .product-img {
@@ -86,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 16px 25px 0px 27px;
+  margin: 16px 15px 0px 27px;
 }
 
 .heart {
