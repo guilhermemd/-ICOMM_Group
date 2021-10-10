@@ -1,73 +1,75 @@
 :root {
   --button-grey: #CCCCCC;
-  --font-productname: #757575
+  --font-productname: #757575;
+  --hover-carrossel: #444444;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
 
 .products {
-  width: 100%;
   max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
 }
 
 .products__title {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 32px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 6px;
 }
 
 .products__carousel {
-  /* display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
-  padding: 35px 106px 0px 106px;
+  justify-content: center;
+  /* padding: 35px 106px 0px 106px; */
 }
 
 .products__carousel button {
   background-color: var(--button-grey);
   width: 40px;
   min-height: 53px;
-  /* padding: 0 0 0 0; */
-}
-
-/* .products__carousel ::before ::after {
-  content: '<';
-  font-size: 30px;
-}
-
-.products__carousel ::after {
-  content: ">";
-  font-size: 30px;
-} */
-.products__title {
-  font-family: 'Nunito', sans-serif;
-  font-size: 24px;
-  font-weight: 200;
-  letter-spacing: 6px;
-
+  margin: 0 -40px 0 -40px;
 }
 
 .product-name {
   font-size: 15px;
 }
 
-/* arrumar magrin do carrossel */
 .product-container {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column; */
+  /* justify-content: center; */
   border: 1px solid #EEEEEE;
+  margin: 0 5px 0 5px;
   padding: 0 0 0 0;
+  height: 400px;
 }
 
-/* tentando arrumar leter do carrosel*/
-.product-info {
+.product-extras {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
 }
+
+/* tentando arrumar letra do carrosel*/
+.product-info {
+  /* display: flex;
+  align-content: flex-start;
+  flex-direction: column;*/
+  height: 90px;
+}
+
+.product-img {
+  height: 300px;
+  margin: auto;
+}
+
 .product-name {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
