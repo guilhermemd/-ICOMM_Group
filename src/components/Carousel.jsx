@@ -4,36 +4,22 @@ import Context from '../context/Context';
 import Slider from "react-slick";
 import "../style/carousel.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-// import { FiHeart} from "react-icons/fi";
-// import { FaHeart } from 'react-icons/fa'
+import { FiHeart} from "react-icons/fi";
+import { FaHeart } from 'react-icons/fa'
 
 
 function Carousel() {
-  const { products, liked, likedProducts  } = useContext(Context);
-  // console.log()
+  const { products, likedProducts, liked  } = useContext(Context);
 
 
-// const heartProducts = (id) => {
-//   // console.log(liked)
-//   setLiked(id)
-//   if (!liked) {
-//     setLiked(id)
-//     return (
-//       <div>
-//         <FiHeart />
-//       </div>
-//     )
-//   }
-
-//   if (liked) {
-//     return (
-//       <div>
-//         <FaHeart />
-//       </div>
-//     )
-//   }
-
-// }
+const heartProducts = (id) => {
+  const alreadyLiked = liked.includes(id);
+  return (
+    <button onClick={() => likedProducts(id)} >
+      {(alreadyLiked) ? <FaHeart /> : <FiHeart />}
+    </button>
+  )
+}
 
 
   const settings = {
@@ -106,7 +92,6 @@ function Carousel() {
     );
   };
 
-  // console.log(products)
   return (
     <section className="products">
       <div className="products-container">
@@ -126,10 +111,8 @@ function Carousel() {
                     <h4>
                       { extras }
                     </h4>
-                  </div>  
-                    <button onClick={ () => likedProducts(id) }>
-                      click me
-                    </button>
+                  </div>
+                    { heartProducts(id) }
                   <img className="product-img" src={image} alt={product} />
                   <div className="product-info">
                     <h3 className="product-name">{product}</h3>

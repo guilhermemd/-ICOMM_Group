@@ -10,20 +10,18 @@ function Provider({ children }) {
   const [ liked, setLiked ] = useState([]);
 
   const likedProducts = (id) => {
-    // console.log('aqui id' + id)
-    const alreadyLiked2 = liked.includes(id);
+    const alreadyLiked = liked.includes(id);
 
-    if (alreadyLiked2) {
+    if (alreadyLiked) {
       const removeLiked = liked.filter((item) => item !== id);
       setLiked([...removeLiked]);
-      // console.log(liked)
+      return alreadyLiked
     }
 
-    if (!alreadyLiked2) {
+    if (!alreadyLiked) {
       setLiked([ ...liked, id]);
-      // console.log(liked)
+      return alreadyLiked
     }
-    
   }
 
 
