@@ -114,7 +114,7 @@ const addToCart = (id) => {
           >
             {products.map(({ id, image, product, price, price_x, extras }) => (
               <div>
-                <div className="product-container">
+                <div className="product-card">
                   <div className="product-extras">
                     <h4 className={ classNameExtras(extras) }>
                       { extras }
