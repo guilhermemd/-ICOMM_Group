@@ -1,15 +1,15 @@
 :root {
-  --button-grey: #CCCCCC;
+  --button-grey: #cccccc;
   --font-productname: #757575;
   --hover-carrossel: #444444;
-  --heart: #E35151;
-  --button-comprar: #824D3E;
+  --heart: #e35151;
+  --button-comprar: #824d3e;
   --verao-letter: #666666;
-  --off20-color: #EBD7CE;
-  --lancamento--color: #824D3E;
+  --off20-color: #ebd7ce;
+  --lancamento--color: #824d3e;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap");
 
 .products {
   max-width: 1200px;
@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 32px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 200;
   letter-spacing: 6px;
@@ -39,9 +39,9 @@
 .product-card {
   display: flex;
   /* align-items: center; */
-  flex-direction: column; 
+  flex-direction: column;
   /* justify-content: center;  */
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   margin: 0 5px 0 5px;
   padding: 5px;
   max-width: 2350px;
@@ -51,6 +51,35 @@
 
 .product-card:hover {
   height: 525px;
+}
+
+.product-comprar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.product-comprar {
+  margin: 5px;
+  /* background-color: var(--button-comprar); */
+}
+
+.product-comprar .comprar {
+  visibility: hidden;
+}
+
+.product-card:hover .product-comprar {
+  background-color: var(--button-comprar);
+  margin: 10px;
+}
+
+.product-card:hover .comprar {
+  background-color: var(--button-comprar);
+  visibility: visible;
+  display: block;
+  color: white;
+  transition: 0.5s;
 }
 
 .product-img {
@@ -65,18 +94,18 @@
 }
 
 .product-name {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: var(--font-productname);
 }
 .product-price {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   margin-top: 5px;
 }
 .product-price_x {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   color: var(--font-productname);
 }
@@ -87,7 +116,7 @@
   margin: 10px 14px 4px 10px;
 }
 .prduct__extras__verao {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   border: 1px solid var(--verao-letter);
   color: var(--verao-letter);
@@ -95,7 +124,7 @@
   padding: 5px;
 }
 .prduct__extras__20off {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   background-color: var(--off20-color);
   border: 1px solid var(--off20-color);
@@ -103,57 +132,17 @@
   padding: 5px;
 }
 .prduct__extras__lancamento {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   color: white;
   background-color: var(--lancamento--color);
-  border: 1px solid var( --lancamento--color);
+  border: 1px solid var(--lancamento--color);
   font-size: 13px;
   padding: 5px;
 }
 .heart {
   color: var(--heart);
 }
-
-.product-comprar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 15px;
-
-}
-
-.product-comprar {
-  margin: 5px;
-  /* background-color: var(--button-comprar); */
-}
-
-.comprar {
-    background-color: var(--button-comprar);
-    display: block;
-    color: white;
-    transition: 0.5s;
-}
-
-.product-comprar .comprar{
-  visibility: hidden;
-
-} 
-
-.product-comprar:hover  {
-  background-color: var(--button-comprar);
-  margin: 10px;
-}
-
-.product-card:hover .comprar {
-  background-color: var(--button-comprar);
-  visibility: visible;
-  display: block;
-  color: white;
-  transition: 0.5s;
-} 
-
-
 
 /* @media screen and (min-width: 768px) {
   teste
