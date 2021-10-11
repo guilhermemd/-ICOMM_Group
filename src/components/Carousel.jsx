@@ -14,8 +14,9 @@ const classNameExtras = (extras) => {
 }
 
 function Carousel() {
-  const { products, likedProducts, liked  } = useContext(Context);
-
+  const { products, likedProducts, liked, addToCartProvider, cart } = useContext(Context);
+  
+  console.log(cart, "carrossel");
 const heartProducts = (id) => {
   const alreadyLiked = liked.includes(id);
   return (
@@ -25,6 +26,9 @@ const heartProducts = (id) => {
   )
 }
 
+const addToCart = (id) => {
+  addToCartProvider(id);
+}
 
   const settings = {
     dots: false,
@@ -117,13 +121,15 @@ const heartProducts = (id) => {
                     </h4>
                     { heartProducts(id) }
                   </div>
-                  <img className="product-img" src={image} alt={product} />
+                  <div className="product-imgAndname">
+                    <img className="product-img" src={image} alt={product} />
+                  </div>
                   <div className="product-info">
                     <h3 className="product-name">{product}</h3>
                     <h4 className="product-price">{price}</h4>
                     <p className="product-price_x">{price_x}</p>
                   </div>
-                  <div className="product-comprar">
+                  <div onClick={() => addToCart(id) } className="product-comprar">
                     <div className="comprar">COMPRAR</div>
                   </div>
                 </div>

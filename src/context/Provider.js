@@ -8,7 +8,8 @@ import Context from './Context';
 function Provider({ children }) {
   const [ products, setProducts ] = useState([...productsAPI])
   const [ liked, setLiked ] = useState([]);
-
+  const [ cart, setCart ] = useState([]);
+  console.log(cart.length + ' fora');
   const likedProducts = (id) => {
     const alreadyLiked = liked.includes(id);
 
@@ -24,12 +25,19 @@ function Provider({ children }) {
     }
   }
 
+  const addToCartProvider = (id) => {
+    setCart([ ...cart, id ]);
+    console.log(cart.length + ' dentro da funcao');
+  }
+
 
   const contextValue = {
     setProducts,
     products,
     liked, 
-    likedProducts, 
+    likedProducts,
+    addToCartProvider, 
+    cart,
   };
 
   return (
