@@ -44,12 +44,15 @@
   border: 1px solid #EEEEEE;
   margin: 0 5px 0 5px;
   padding: 5px;
-  min-width: none;
 }
 
 .product-img {
   min-width: 240px;
   margin: auto;
+}
+
+.product-info {
+  margin-top: 5px;
 }
 
 .product-name {
@@ -106,7 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
+  padding: 15px;
 
 }
 
