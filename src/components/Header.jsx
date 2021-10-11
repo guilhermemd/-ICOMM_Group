@@ -8,7 +8,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 function Header() {
   const { cart } = useContext(Context);
 
-  // let cartLength = cart.length;
+  let cartLength = cart.length;
   console.log(cart, "header")
 
 
@@ -25,7 +25,7 @@ function Header() {
         </div>
         <div>
           <FiShoppingCart className="header__cart" />
-          {/* <p>{ cartLength }</p>  */}
+          <p>{ cartLength }</p> 
         </div>
       </div>  
     </nav>

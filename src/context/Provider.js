@@ -37,6 +37,7 @@ function Provider({ children }) {
     liked, 
     likedProducts,
     addToCartProvider, 
+    cart,
   };
 
   return (

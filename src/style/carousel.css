@@ -44,15 +44,18 @@
   border: 1px solid #EEEEEE;
   margin: 0 5px 0 5px;
   padding: 5px;
+  max-width: 2350px;
 }
 
 .product-img {
-  min-width: 240px;
+  max-width: 220px;
+  min-width: 220px;
   margin: auto;
 }
 
 .product-info {
-  margin-top: 5px;
+  margin-top: 11px;
+  padding: 0 33px;
 }
 
 .product-name {
@@ -64,6 +67,7 @@
 .product-price {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
+  margin-top: 5px;
 }
 .product-price_x {
   font-family: 'Nunito', sans-serif;
