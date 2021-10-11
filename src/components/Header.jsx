@@ -9,8 +9,6 @@ function Header() {
   const { cart } = useContext(Context);
 
   let cartLength = cart.length;
-  console.log(cart, "header")
-
 
   return (
     <nav className="header">
@@ -24,8 +22,8 @@ function Header() {
           <h4 data-className="header__title">MCX</h4>
         </div>
         <div>
-          <FiShoppingCart className="header__cart" />
-          <p>{ cartLength }</p> 
+          <div className="cart__number">{ cartLength }</div> 
+          <FiShoppingCart size={30} className="header__cart" />
         </div>
       </div>  
     </nav>
