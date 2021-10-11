@@ -44,12 +44,15 @@
 
 .header__cart {
   color: var(--white);
+  position: relative;
+  top: -4px;
+  right: -5px;
 }
 
 .cart__number {
   position: relative;
-  top: 16px;
-  right: -29px;
+  top: 8px;
+  right: -30px;
   display: grid;
   justify-content: center;
   background: var(--cart-number);
