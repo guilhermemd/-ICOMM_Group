@@ -35,9 +35,7 @@
   margin: 30px -21px 0 -42px;
   color: white;
 }
-.product-name {
-  font-size: 15px;
-}
+
 .product-container {
   display: flex;
   /* align-items: center; */
@@ -46,24 +44,18 @@
   border: 1px solid #EEEEEE;
   margin: 0 5px 0 5px;
   padding: 5px;
-  height: 450px;
-  width: 269px;
+  min-width: none;
 }
-/* tentando arrumar letra do carrosel*/
-.product-info {
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  /* height: 90px;
-  padding: 5px 6px 1px 15px; */
-}
+
 .product-img {
-  height: 300px;
+  min-width: 240px;
   margin: auto;
 }
+
 .product-name {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
+  font-size: 15px;
   color: var(--font-productname);
 }
 .product-price {

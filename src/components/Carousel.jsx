@@ -117,9 +117,11 @@ const heartProducts = (id) => {
                     </h4>
                     { heartProducts(id) }
                   </div>
-                  <img className="product-img" src={image} alt={product} />
-                  <div className="product-info">
+                  <div className="product-imgAndName">
+                    <img className="product-img" src={image} alt={product} />
                     <h3 className="product-name">{product}</h3>
+                  </div>
+                  <div className="product-info">
                     <h4 className="product-price">{price}</h4>
                     <p className="product-price_x">{price_x}</p>
                   </div>
