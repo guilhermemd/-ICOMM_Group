@@ -9,8 +9,6 @@ function Header() {
   const { cart } = useContext(Context);
 
   let cartLength = cart.length;
-  console.log(cart, "header")
-
 
   return (
     <nav className="header">

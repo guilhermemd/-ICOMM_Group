@@ -9,25 +9,22 @@ function Provider({ children }) {
   const [ products, setProducts ] = useState([...productsAPI])
   const [ liked, setLiked ] = useState([]);
   const [ cart, setCart ] = useState([]);
-  console.log(cart.length + ' fora');
+
   const likedProducts = (id) => {
     const alreadyLiked = liked.includes(id);
 
     if (alreadyLiked) {
       const removeLiked = liked.filter((item) => item !== id);
       setLiked([...removeLiked]);
-      return alreadyLiked
     }
 
     if (!alreadyLiked) {
-      setLiked([ ...liked, id]);
-      return alreadyLiked
+      setLiked([ ...liked, id]); 
     }
   }
 
   const addToCartProvider = (id) => {
     setCart([ ...cart, id ]);
-    console.log(cart.length + ' dentro da funcao');
   }
 
 
