@@ -148,4 +148,8 @@
   .products {
     max-width: 200px;
   }
+
+  .products__title {
+    margin-top: -25px;
+  }  
 }
