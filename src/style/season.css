@@ -47,6 +47,29 @@
   letter-spacing: 6px;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .season__container {
+    /* max-width: 300px; */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 64px;
+    width: 100%;
+  }
+
+  .season__container img {
+    padding: 0px 15px 0 20px;  
+  }
+
+  .season h4 {
+    font-size: 20px;
+  }  
+
+  .season__right__text {
+    margin-top: -9rem;
+    margin-left: 3rem;
+  }
   
-} */
+  .season__left__text {
+    margin-top: -8rem;
+    margin-left: 3rem;
+  }
+}
