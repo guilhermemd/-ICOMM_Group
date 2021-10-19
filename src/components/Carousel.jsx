@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, func, string } from 'prop-types';
+// import { shape, func, string } from 'prop-types';
 import Slider from 'react-slick';
 import '../style/carousel.css';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
@@ -14,8 +14,7 @@ const classNameExtras = (extras) => {
   return 'product__extras';
 };
 
-function Carousel(props) {
-  const { onClick, style } = props;
+function Carousel() {
   const {
     products, likedProducts, liked, addToCartProvider,
   } = useContext(Context);
@@ -76,7 +75,8 @@ function Carousel(props) {
     color: 'white',
   };
 
-  const PrevArrow = () => (
+  // eslint-disable-next-line react/prop-types
+  const PrevArrow = ({ onClick, style }) => (
     <button
       type="button"
       onClick={onClick}
@@ -86,7 +86,8 @@ function Carousel(props) {
     </button>
   );
 
-  const NextArrow = () => (
+  // eslint-disable-next-line react/prop-types
+  const NextArrow = ({ onClick, style }) => (
     <button
       type="button"
       onClick={onClick}
@@ -141,11 +142,12 @@ function Carousel(props) {
   );
 }
 
-Carousel.propTypes = {
-  onClick: func,
-  style: shape({
-    display: string,
-  }),
-}.isRequired;
+// Slider.propTypes = {
+//   PrevArrow: shape({
+//     onClick: func,
+//     style: shape({
+//       display: string,
+//     }),
+// }.isRequired;
 
 export default Carousel;
