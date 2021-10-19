@@ -38,12 +38,12 @@ const addToCart = (id) => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1.5,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           nextArrow: false,
           prevArrow: false,
         },

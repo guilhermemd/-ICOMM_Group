@@ -159,13 +159,25 @@
     min-width: 150px;
     margin: auto;
   }
+
+
   
   .product-card {
     height: 400px;
+    width: 240px;
     margin-bottom: 50px;
+    margin: 0px 0px 0 -127px;
   }
   .product-card:hover {
     height: 460px;
   }
+
+  .products-container {
+    margin: 0 -40px 0 -40px;
+  }
+
+  /* .slick-dots {
+    margin-bottom: 42px;
+  } */
 
 }
