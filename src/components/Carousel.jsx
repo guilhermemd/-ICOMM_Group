@@ -146,9 +146,9 @@ const addToCart = (id) => {
                     <h4 className="product-price">{price}</h4>
                     <p className="product-price_x">{price_x}</p>
                   </div>
-                  <div onClick={() => addToCart(id) } className="product-comprar">
+                  <button onClick={() => addToCart(id) } className="product-comprar">
                     <div className="comprar">COMPRAR</div>
-                  </div>
+                  </button>
                 </div>
               </div>
             ))}
