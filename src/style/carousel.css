@@ -31,10 +31,6 @@
 .products__carousel {
   justify-content: center;
 }
-.products__carousel button {
-  margin: 30px -21px 0 -42px;
-  color: white;
-}
 
 .product-card {
   display: flex;
@@ -141,14 +137,14 @@
   padding: 5px;
 }
 .heart {
-  color: var(--heart) !important;
-  margin: 0 0 0 0 !important;
-  background: none!important;
-	border: none !important;
-	padding: 0 !important;
-	font: inherit !important;
-	cursor: pointer !important;
-	outline: inherit !important;
+  color: var(--heart);
+  margin: 0 0 0 0;
+  background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 @media screen and (max-width: 768px) {

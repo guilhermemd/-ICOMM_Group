@@ -58,6 +58,8 @@ const addToCart = (id) => {
     left: "-2rem",
     top: "8rem",
     cursor: "pointer",
+    margin: "30px -21px 0 -42px",
+    color: "white",
   };
 
   const stylesNextArrow = {
@@ -67,6 +69,8 @@ const addToCart = (id) => {
     right: "-2rem",
     top: "8rem",
     cursor: "pointer",
+    margin: "30px -42px 0 -42px",
+    color: "white",
   };
 
 /* !!!!Gambiarra!!!! */
