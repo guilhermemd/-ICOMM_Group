@@ -43,7 +43,7 @@ const addToCart = (id) => {
           slidesToShow: 1.5,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           nextArrow: false,
           prevArrow: false,
         },
