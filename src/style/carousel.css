@@ -31,6 +31,9 @@
 .products__carousel {
   justify-content: center;
 }
+.arrow_carousel:hover {
+  background: #444444;
+}
 
 .product-card {
   display: flex;
@@ -116,7 +119,7 @@
   justify-content: space-between;
   margin: 10px 14px 4px 10px;
 }
-.prduct__extras__verao {
+.product__extras__verao {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   border: 1px solid var(--verao-letter);
@@ -124,7 +127,7 @@
   font-size: 13px;
   padding: 5px;
 }
-.prduct__extras__20off {
+.product__extras__20off {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   background-color: var(--off20-color);
@@ -132,7 +135,7 @@
   font-size: 13px;
   padding: 5px;
 }
-.prduct__extras__lancamento {
+.product__extras__lancamento {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   color: white;

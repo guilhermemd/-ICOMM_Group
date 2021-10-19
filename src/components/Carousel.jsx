@@ -1,34 +1,37 @@
 import React, { useContext } from 'react';
+import { shape, func, string } from 'prop-types';
+import Slider from 'react-slick';
+import '../style/carousel.css';
+import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
+import { FiHeart } from 'react-icons/fi';
+import { FaHeart } from 'react-icons/fa';
 import Context from '../context/Context';
 
-import Slider from "react-slick";
-import "../style/carousel.css";
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { FiHeart} from "react-icons/fi";
-import { FaHeart } from 'react-icons/fa'
-
 const classNameExtras = (extras) => {
-  if(extras === 'VERÃO 2022') return 'prduct__extras__verao';
-  if(extras === '20% OFF') return 'prduct__extras__20off';
-  if(extras === 'LANÇAMENTO') return 'prduct__extras__lancamento';
-}
+  if (extras === 'VERÃO 2022') return 'product__extras__verao';
+  if (extras === '20% OFF') return 'product__extras__20off';
+  if (extras === 'LANÇAMENTO') return 'product__extras__lancamento';
+  return 'product__extras';
+};
 
-function Carousel() {
-  const { products, likedProducts, liked, addToCartProvider, cart } = useContext(Context);
-  
-  console.log(cart, "carrossel");
-const heartProducts = (id) => {
-  const alreadyLiked = liked.includes(id);
-  return (
-    <button className="heart" onClick={() => likedProducts(id)} >
-      {(alreadyLiked) ? <FaHeart size={30} /> : <FiHeart size={30} />}
-    </button>
-  )
-}
+function Carousel(props) {
+  const { onClick, style } = props;
+  const {
+    products, likedProducts, liked, addToCartProvider,
+  } = useContext(Context);
 
-const addToCart = (id) => {
-  addToCartProvider(id);
-}
+  const heartProducts = (id) => {
+    const alreadyLiked = liked.includes(id);
+    return (
+      <button type="button" className="heart" onClick={() => likedProducts(id)}>
+        {(alreadyLiked) ? <FaHeart size={30} /> : <FiHeart size={30} />}
+      </button>
+    );
+  };
+
+  const addToCart = (id) => {
+    addToCartProvider(id);
+  };
 
   const settings = {
     dots: false,
@@ -47,75 +50,51 @@ const addToCart = (id) => {
           nextArrow: false,
           prevArrow: false,
         },
-      } 
-    ]    
+      },
+    ],
   };
 
   const stylesPrevArrow = {
-    backgroundColor: "#CCCCCC",
-    border: "none",
-    position: "absolute",
-    left: "-2rem",
-    top: "8rem",
-    cursor: "pointer",
-    margin: "30px -21px 0 -42px",
-    color: "white",
+    backgroundColor: '#CCCCCC',
+    border: 'none',
+    position: 'absolute',
+    left: '-2rem',
+    top: '8rem',
+    cursor: 'pointer',
+    margin: '30px -21px 0 -42px',
+    color: 'white',
   };
 
   const stylesNextArrow = {
-    backgroundColor: "#CCCCCC",
-    border: "none",
-    position: "absolute",
-    right: "-2rem",
-    top: "8rem",
-    cursor: "pointer",
-    margin: "30px -42px 0 -42px",
-    color: "white",
+    backgroundColor: '#CCCCCC',
+    border: 'none',
+    position: 'absolute',
+    right: '-2rem',
+    top: '8rem',
+    cursor: 'pointer',
+    margin: '30px -42px 0 -42px',
+    color: 'white',
   };
 
-/* !!!!Gambiarra!!!! */
+  const PrevArrow = () => (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{ ...style, ...stylesPrevArrow }}
+    >
+      <RiArrowLeftSLine size={50} className="arrow_carousel" />
+    </button>
+  );
 
-  function MouseOver(event) {
-    event.target.style.background = '#444444';
-  }
-
-  function MouseOut(event){
-    event.target.style.background= '#EEEEEE';
-  }
-
-/* !!!!Gambiarra!!!! */
-
-  const PrevArrow = (props) => {
-    const { onClick, style } = props;
-
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        style={{ ...style, ...stylesPrevArrow }}
-        onMouseOver={ MouseOver }
-        onMouseOut={ MouseOut }
-        >
-        <RiArrowLeftSLine size={50} className="arrow" />
-      </button>
-    );
-  };
-
-  const NextArrow = (props) => {
-    const { onClick, style } = props;
-
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        style={{ ...style, ...stylesNextArrow }}
-        onMouseOver={ MouseOver }
-        onMouseOut={ MouseOut }
-      >
-        <RiArrowRightSLine size={50} className="arrow"/>
-      </button>
-    );
-  };
+  const NextArrow = () => (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{ ...style, ...stylesNextArrow }}
+    >
+      <RiArrowRightSLine size={50} className="arrow_carousel" />
+    </button>
+  );
 
   return (
     <section className="products">
@@ -127,13 +106,16 @@ const addToCart = (id) => {
           <Slider
             prevArrow={<PrevArrow />}
             nextArrow={<NextArrow />}
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...settings}
           >
-            {products.map(({ id, image, product, price, price_x, extras }) => (
+            {products.map(({
+              id, image, product, price, pricex, extras,
+            }) => (
               <div>
                 <div className="product-card">
                   <div className="product-extras">
-                    <h4 className={ classNameExtras(extras) }>
+                    <h4 className={classNameExtras(extras)}>
                       { extras }
                     </h4>
                     { heartProducts(id) }
@@ -144,9 +126,9 @@ const addToCart = (id) => {
                   <div className="product-info">
                     <h3 className="product-name">{product}</h3>
                     <h4 className="product-price">{price}</h4>
-                    <p className="product-price_x">{price_x}</p>
+                    <p className="product-price_x">{pricex}</p>
                   </div>
-                  <button onClick={() => addToCart(id) } className="product-comprar">
+                  <button type="button" onClick={() => addToCart(id)} className="product-comprar">
                     <div className="comprar">COMPRAR</div>
                   </button>
                 </div>
@@ -158,5 +140,12 @@ const addToCart = (id) => {
     </section>
   );
 }
+
+Carousel.propTypes = {
+  onClick: func,
+  style: shape({
+    display: string,
+  }),
+}.isRequired;
 
 export default Carousel;

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { node } from 'prop-types';
 
-import productsAPI from "../service/api";
+import productsAPI from '../service/api';
 
 import Context from './Context';
 
 function Provider({ children }) {
-  const [ products, setProducts ] = useState([...productsAPI])
-  const [ liked, setLiked ] = useState([]);
-  const [ cart, setCart ] = useState([]);
+  const [products, setProducts] = useState([...productsAPI]);
+  const [liked, setLiked] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const likedProducts = (id) => {
     const alreadyLiked = liked.includes(id);
@@ -19,26 +19,25 @@ function Provider({ children }) {
     }
 
     if (!alreadyLiked) {
-      setLiked([ ...liked, id]); 
+      setLiked([...liked, id]);
     }
-  }
+  };
 
   const addToCartProvider = (id) => {
-    setCart([ ...cart, id ]);
-  }
-
+    setCart([...cart, id]);
+  };
 
   const contextValue = {
     setProducts,
     products,
-    liked, 
+    liked,
     likedProducts,
-    addToCartProvider, 
+    addToCartProvider,
     cart,
   };
 
   return (
-    <Context.Provider value={ contextValue }>
+    <Context.Provider value={contextValue}>
       {children}
     </Context.Provider>
   );
