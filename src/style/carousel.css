@@ -141,7 +141,14 @@
   padding: 5px;
 }
 .heart {
-  color: var(--heart);
+  color: var(--heart) !important;
+  margin: 0 0 0 0 !important;
+  background: none!important;
+	border: none !important;
+	padding: 0 !important;
+	font: inherit !important;
+	cursor: pointer !important;
+	outline: inherit !important;
 }
 
 @media screen and (max-width: 768px) {

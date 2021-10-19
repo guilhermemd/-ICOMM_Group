@@ -20,9 +20,9 @@ function Carousel() {
 const heartProducts = (id) => {
   const alreadyLiked = liked.includes(id);
   return (
-    <div className="heart" onClick={() => likedProducts(id)} >
+    <button className="heart" onClick={() => likedProducts(id)} >
       {(alreadyLiked) ? <FaHeart size={30} /> : <FiHeart size={30} />}
-    </div>
+    </button>
   )
 }
 
