@@ -31,10 +31,6 @@
 .products__carousel {
   justify-content: center;
 }
-.products__carousel button {
-  margin: 30px -21px 0 -42px;
-  color: white;
-}
 
 .product-card {
   display: flex;
@@ -58,11 +54,16 @@
   align-items: center;
   justify-content: space-around;
   padding: 15px;
+  margin: 0 0 0 0;
+  background: none;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .product-comprar {
   margin: 5px;
-  /* background-color: var(--button-comprar); */
 }
 
 .product-comprar .comprar {
@@ -142,6 +143,13 @@
 }
 .heart {
   color: var(--heart);
+  margin: 0 0 0 0;
+  background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 @media screen and (max-width: 768px) {

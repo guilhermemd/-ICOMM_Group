@@ -20,9 +20,9 @@ function Carousel() {
 const heartProducts = (id) => {
   const alreadyLiked = liked.includes(id);
   return (
-    <div className="heart" onClick={() => likedProducts(id)} >
+    <button className="heart" onClick={() => likedProducts(id)} >
       {(alreadyLiked) ? <FaHeart size={30} /> : <FiHeart size={30} />}
-    </div>
+    </button>
   )
 }
 
@@ -58,6 +58,8 @@ const addToCart = (id) => {
     left: "-2rem",
     top: "8rem",
     cursor: "pointer",
+    margin: "30px -21px 0 -42px",
+    color: "white",
   };
 
   const stylesNextArrow = {
@@ -67,6 +69,8 @@ const addToCart = (id) => {
     right: "-2rem",
     top: "8rem",
     cursor: "pointer",
+    margin: "30px -42px 0 -42px",
+    color: "white",
   };
 
 /* !!!!Gambiarra!!!! */
@@ -142,9 +146,9 @@ const addToCart = (id) => {
                     <h4 className="product-price">{price}</h4>
                     <p className="product-price_x">{price_x}</p>
                   </div>
-                  <div onClick={() => addToCart(id) } className="product-comprar">
+                  <button onClick={() => addToCart(id) } className="product-comprar">
                     <div className="comprar">COMPRAR</div>
-                  </div>
+                  </button>
                 </div>
               </div>
             ))}
